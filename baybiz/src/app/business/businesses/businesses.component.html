@@ -1,0 +1,25 @@
+
+
+
+<div class="container">
+<!-- The card the businesses are displayed in -->
+  <div class="row">
+    <div class="card border-success" style="width: 18rem; margin-top: 110px;" *ngFor="let b of businessList$ | async">
+      <div class="card-header">
+        
+        {{ b.category }}
+      </div>
+      <img src="{{b.imageUrl}}" class="card-img-top" style="max-height: 180px;">
+      <div class="card-body">
+        <h5 class="card-title">{{ b.name }}</h5>
+        <p class="card-text">{{ b.address }}</p>
+        <footer class="blockquote-footer"><cite title="email-address">{{ b.email }}</cite></footer>
+        <footer class="blockquote-footer"><cite title="phone-number">{{ b.phone }}</cite></footer>
+        <footer class="blockquote-footer"><a target="blank" href="{{b.website}}"><cite title="categories">{{ b.website }}</cite></a></footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
