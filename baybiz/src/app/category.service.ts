@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 // export interface Item { name: String};
 
 export class CategoryService {
-  
+  categories: Observable<any[]>
   constructor(private db: AngularFireDatabase) { }
 
 
@@ -20,7 +20,7 @@ export class CategoryService {
     // return categories.map(c => ({ key: c.payload.key, ...c.payload.val() })); 
     // }); 
      
-    return this.db.list('/categories');
+    return this.db.list('categories').valueChanges();
     
   }
 }

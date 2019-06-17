@@ -39,7 +39,7 @@
           <label for="category">Category</label>
           <select #category="ngModel" [(ngModel)]="f.category" name="category" id="category"  class="form-control" required>
             <option value="" selected></option>
-            <option *ngFor="let c of categories$ | async" [value]="c.$key">
+            <option *ngFor="let c of categories$ | async" >
               <!-- The categories Observables that is unwrapped with the async pipe is coming from the add-biz.component.ts -->
               {{ c.name }}
             </option>
@@ -73,7 +73,7 @@
     <div class="card" style="width: 18rem; margin-top: 100px;">
       <div class="card-header">
         <!-- Category Preview -->
-       {{ category }}
+       {{ category.value }}
       </div>
       <img class="card-img-top" [src]="imageUrl.value">
       <div class="card-body">

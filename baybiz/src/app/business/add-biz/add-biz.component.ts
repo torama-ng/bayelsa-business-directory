@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { BusinessService } from '../business.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-add-biz',
   templateUrl: './add-biz.component.html',
@@ -17,8 +18,8 @@ categories$;
     private businessService: BusinessService,
     private router: Router) { 
       // The function for list the categories and it's tied to the categories service at ../../category.service.ts
-    this.categories$ = categoryService.getCategories().valueChanges()
-      // console.log(this.categories$)
+    this.categories$ = categoryService.getCategories();
+      console.log(this.categories$)
   }
   
   save(business){
