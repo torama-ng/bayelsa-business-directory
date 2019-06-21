@@ -1,3 +1,4 @@
+import { AllCategoriesComponent } from './all-categories/all-categories/all-categories.component';
 import { BusinessService } from './business/business.service';
 import { CategoryService } from './category.service';
 import { UserService } from './user.service';
@@ -14,7 +15,6 @@ import { AuthGuardService } from './form/auth-guard.service';
 import { AuthService } from './form/auth.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
-
 import { AppRoutingModule } from './app-routing.module';
 // For MDB Angular Free
 // import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -28,6 +28,49 @@ import { ProfileComponent } from './form/profile/profile.component';
 import { DataStorageService } from './shared/data-storage.service';
 import { AddBizComponent } from './business/add-biz/add-biz.component';
 import { BusinessesComponent } from './business/businesses/businesses.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatCommonModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatLineModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatOptionModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatPseudoCheckboxModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+} from '@angular/material';
+import { HotelsComponent } from './all-categories/hotels/hotels.component';
+import { TechnologyComponent } from './all-categories/technology/technology.component';
+import { EducationComponent } from './all-categories/education/education.component';
 
 
 // export const firebaseConfig ={
@@ -49,11 +92,51 @@ import { BusinessesComponent } from './business/businesses/businesses.component'
     ProfileComponent,
     AddBizComponent,
     BusinessesComponent,
+    AllCategoriesComponent,
+    HotelsComponent,
+    TechnologyComponent,
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatCommonModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatLineModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatOptionModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatPseudoCheckboxModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -63,7 +146,8 @@ import { BusinessesComponent } from './business/businesses/businesses.component'
     NgbModule.forRoot(),
     FormsModule,
      ReactiveFormsModule,
-     CustomFormsModule
+     CustomFormsModule,
+     BrowserAnimationsModule
   ],
   providers: [
     AuthService,
